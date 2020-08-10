@@ -1,3 +1,5 @@
+import re
+import numpy as np
 from pathlib import Path
 
 # From https://github.com/fastai/fastai/blob/8dd982da14c9621418263d8fd431ff56bd2c533c/fastai/text/data.py
