@@ -43,8 +43,9 @@ def split_wiki(file_path, destination, valid_pct=0.05, use_files_pct=1.0, lang='
                     f = (train_dest/f'{title}.txt').open('w')
                 else:
                     f = (valid_dest/f'{title}.txt').open('w')
+                corpus_file.write(l + "\n")
             elif not skip_file:
-                l = apply_rules(l)
+                l = apply_rules(l) + "\n"
                 f.write(l.replace('</doc>', ''))
                 corpus_file.write(l)
         f.close()
